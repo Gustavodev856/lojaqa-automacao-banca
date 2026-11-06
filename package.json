@@ -1,17 +1,27 @@
 {
   "name": "lojaqa-automacao-banca",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto de automação de testes com Playwright e TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:e2e": "playwright test tests/e2e",
+    "test:api": "playwright test tests/api",
+    "test:desafio:site": "playwright test --config=desafio-mercado/playwright.desafio.config.ts wikipedia-site.spec.ts",
+    "test:desafio:api": "playwright test --config=desafio-mercado/playwright.desafio.config.ts wiki-api.spec.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automacao",
+    "testes"
+  ],
+  "author": "Gustavo Vasconcelos",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.64.1",
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
     "typescript": "^7.0.2"
   },
   "dependencies": {
